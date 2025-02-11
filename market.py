@@ -12,7 +12,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def analyze_the_market(result_text, query):
     result_text = "query is : " + query + " and result is : " + result_text + " above information is the research of some market analyst about the unlisted share in indian stock market. analyse all the stratement and make a common conclusion. tell me the estimate date of listing of these share. estimate listing price, how much strong the share is. market interest, how strong fundamentals is. all necessary inormation about that share, beacuase i want to invest. and according to these statements, in which sahre should i invest? Also some analysis by your self."
-    genai.configure(api_key="AIzaSyDjSFPcvYsJP4dBXIcTYdxaWpb9n8YCUWc")
+    genai.configure(api_key="")
     model = genai.GenerativeModel("gemini-1.5-flash")
     response = model.generate_content(result_text)
     print("\n Analysis of market is : \n")
@@ -21,7 +21,7 @@ def analyze_the_market(result_text, query):
 
 def transcribe_with_assemblyai(audio_file):
 
-    aai.settings.api_key = "bead54e569574ae4a725b253315f8553"
+    aai.settings.api_key = ""
     transcriber = aai.Transcriber()
 
     transcript = transcriber.transcribe(audio_file)
@@ -246,7 +246,11 @@ def process_sub_query(sub_query, youtube, one_week_ago):
 # OR Budget 2025 Impact on Electric Vehicle Stocks
 # OR Budget 2025 and Olectra Greentech
 # OR Olectra Greentech Share Price Prediction 31st January 2025
-API_KEY = "AIzaSyC24qvy6xEeyjZQ7FYZGzeptLFsSbZCs4Q"  # Replace with a valid YouTube Data API key
+
+
+
+
+API_KEY = ""  # Replace with a valid YouTube Data API key
 SEARCH_QUERY = """Upcoming IPOs in India 2025
 OR OYO pre-IPO Analysis
 OR OYO IPO Date and Price
